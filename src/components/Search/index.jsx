@@ -1,9 +1,8 @@
 import React from "react";
-// import { SearchContext } from "../../App";
 import styles from './Search.module.scss';
 // import { SearchContext } from "../../App";
 
-const Search = (searchValue,setSearchValue) => {
+const Search = ({searchValue,setSearchValue}) => {
     // const {searchValue,setSearchValue} = React.useContext(SearchContext);
 
     return(
@@ -19,12 +18,14 @@ const Search = (searchValue,setSearchValue) => {
             </svg>   
         
                   
-        <input className= {styles.input} placeholder="Поиск пиццы..." type='text'
-             value={searchValue}
-             onChange = {(e) => setSearchValue(e.target.value)  }
+        <input className= {styles.input} 
+            placeholder="Поиск пиццы..." 
+            type='text'
+            value={searchValue}
+            onChange = {(e) =>setSearchValue(e.target.value)} 
             
         />
-        
+      
     </div>
     ) 
     

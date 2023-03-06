@@ -24,7 +24,7 @@ import Skeleton from "../components/Skeleton";
     
       setIsLoading(true);
         //        fetch(`https://63dfcf6159bccf35daba1cf3.mockapi.io/items?${valueCat > 0 ? `category=${valueCat}` : ''}&sortBy=${valueSort.sortProperty}&order=asc `) 
-       fetch(`https://63dfcf6159bccf35daba1cf3.mockapi.io/items?${category}&sortBy=${sortBy}&$order=${order}`)
+       fetch(`https://63dfcf6159bccf35daba1cf3.mockapi.io/items?${category}&sortBy=${sortBy}&$order=${order}search=${search}`)
         
           .then(response=>{
            return  response.json()
@@ -39,7 +39,7 @@ import Skeleton from "../components/Skeleton";
     //  const pizzas = items.map((obj) => <PizzaBlock key={obj.id} {...obj} />);
     // поиск фильтром при небольшом количестве элементов
   const pizzas = items.filter((obj) => {
-    if(obj.title.includes(searchValue)) {
+    if(obj.title.toLowerCase().includes(searchValue.toLowerCase())) {
       return true;
 
     }
