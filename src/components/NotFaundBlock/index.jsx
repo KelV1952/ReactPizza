@@ -1,7 +1,7 @@
 import React from "react";
 import styles from './NotFaundBlock.module.scss'
 
-console.log(styles)
+
 const NotFaundBlock = ()=>{
     return(
         <div className={styles.root}>Пипец!<br/> 

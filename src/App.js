@@ -5,21 +5,21 @@ import Header from "./components/Header";
 import Home from "./pages/Home";
 import NotFaund from "./pages/NotFaund";
 import Cart from './pages/Cart';
-import { Routes,Route } from "react-router-dom";
-export const SearchContext = React.createContext()
- 
- function App() {
+import { Route, Routes } from "react-router-dom";
 
+export const SearchContext = React.createContext();
+
+
+ function App() {
+   
    const [searchValue, setSearchValue]= React.useState('');
-  
+  //  const dispatch = useDispatch()
   
   return (
     <div className="wrapper">
+      
       <SearchContext.Provider value ={{searchValue, setSearchValue}}>
-      <Header 
-        // searchValue = {searchValue}
-        // setSearchValue = {setSearchValue}
-      />
+      <Header />
       <div className="content">
         <div className="container">
          <Routes>
