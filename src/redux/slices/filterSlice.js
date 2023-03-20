@@ -4,7 +4,7 @@ const initialState = {
   valueCat:0,
   sort:{
     name:'пополярности',
-    sortProperty:'rating,'
+    sortProperty:'rating',
   },
 } 
    const filterSlice = createSlice({
