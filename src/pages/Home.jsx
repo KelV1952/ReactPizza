@@ -26,13 +26,17 @@ import {setSort} from '../redux/slices/filterSlice';
     useEffect(()=>{
       const sortBy = valueSort.sortProperty.replace('-','');
       const order = valueSort.sortProperty.includes('-') ? 'desc' : 'asc';
-      const category = valueCat > 0 ? `category=${valueCat}` : '';
-      const search = searchValue ? `search=${searchValue}` : '';
+      // const category = valueCat > 0 ? `category=${valueCat}` : '';
+      // const search = searchValue ? `search=${searchValue}` : '';
+      const category = valueCat > 0 ? `&category=${valueCat}` : '';
+      const search = searchValue ? `&search=${searchValue}` : '';
     
       setIsLoading(true);
         //        fetch(`https://63dfcf6159bccf35daba1cf3.mockapi.io/items?${valueCat > 0 ? `category=${valueCat}` : ''}&sortBy=${valueSort.sortProperty}&order=asc `) 
-       fetch(`https://63dfcf6159bccf35daba1cf3.mockapi.io/items?${category}&sortBy=${sortBy}&order=${order}&search=${search}`)
-        
+      //  fetch(`https://63dfcf6159bccf35daba1cf3.mockapi.io/items?${category}&sortBy=${sortBy}&order=${order}&search=${search}`)
+      //  fetch(`https://63dfcf6159bccf35daba1cf3.mockapi.io/items?sortBy=${sortBy}${category}&order=${order}${search}`) 
+      fetch(`https://63dfcf6159bccf35daba1cf3.mockapi.io/items?sortBy=${sortBy}${category}&order=${order}${search}`)     
+       
           .then(response=>{
            return  response.json()
         }

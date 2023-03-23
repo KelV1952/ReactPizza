@@ -3,8 +3,8 @@ import { createSlice } from '@reduxjs/toolkit'
 const initialState = {
   valueCat:0,
   sort:{
-    name:'пополярности',
-    sortProperty:'rating,'
+    name:'популярности',
+    sortProperty:'rating',
   },
 } 
    const filterSlice = createSlice({

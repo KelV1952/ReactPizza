@@ -12,17 +12,26 @@
     border:1px solid rgba(0, 0,0, 0.2);
     font-size: 20px;
     left: 100px;
+    &:focus {
+       border:1px solid  rgba(0, 0,0, 0.2); 
+    }
 }
 .icon {
     width: 22px;
     height: 22px; 
-    position: absolute; 
-    left: 35px;
+    position: absolute;
+    opacity: 0.5; 
+    left: 20px;
     top: 8px;
 }
 .clearIcon {
     width: 22px;
-    height: 22px; 
-    opacity: 0.5;
-    //  position: relative;
+    height: 22px;
+    background-color: red;
+    border: red;
+    opacity: 0.5; 
+    left: 370px;
+    position: absolute;
+    top: 5px;
+    
 }

@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logoSvg from "../assets/img/pizza-logo.svg";
 import Search from "./Search";
+// import close_icon from '../assets/img/326579_close_icon (2).svg'
 
 function Header() {
   return (
@@ -14,7 +15,7 @@ function Header() {
             <h1>React Pizza</h1>
             <p>самая вкусная пицца во вселенной</p>
           </div>
-         
+                  
         </div>
         </Link >
         <Search 
